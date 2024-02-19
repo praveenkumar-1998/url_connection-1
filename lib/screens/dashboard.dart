@@ -25,20 +25,22 @@ class _DashboardState extends State<Dashboard> {
       onPageFinished: (String url) {},
       onWebResourceError: (WebResourceError error) {},
       onNavigationRequest: (NavigationRequest request) {
-        if (request.url.startsWith('https://www.youtube.com/')) {
+        if (request.url.startsWith('https://mapims.online/staff2/')) {
           return NavigationDecision.prevent;
         }
         return NavigationDecision.navigate;
       },
     ),
   )
-  ..loadRequest(Uri.parse('https://www.youtube.com/'));
+  ..loadRequest(Uri.parse('https://www.mapims.online/staff2/'));
   }
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-    appBar: AppBar(title: const Text('Youtube')),
-    body: WebViewWidget(controller: controller),
+    return SafeArea(
+      child: Scaffold(
+      // appBar: AppBar(title: const Text('Mapims')),
+      body: WebViewWidget(controller: controller),
+      ),
     );
   }
 }

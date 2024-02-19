@@ -2,7 +2,8 @@ import 'dart:async';
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:url_connection/screens/bottomnavigationbar.dart';
+// import 'package:url_connection/screens/bottomnavigationbar.dart';
+import 'package:url_connection/screens/dashboard.dart';
 
 
 class SplashScreen extends StatefulWidget {
@@ -22,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   routetoHome(){
    Timer(const Duration(seconds: 3),
-   ()=>Navigator.pushReplacement(context, MaterialPageRoute(builder:( context)=>const MyHomePage()),),
+   ()=>Navigator.pushReplacement(context, MaterialPageRoute(builder:( context)=>const Dashboard()),),
    );
   }
  @override
@@ -45,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Image.asset('assets/logo/dosapark_logo-01.png'),
+          Image.asset('assets/logo/fc3a69f9-e565-43cc-adc8-86ce1df5970e.png'),
          
         ],
       )),
